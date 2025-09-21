@@ -185,6 +185,10 @@ def update_announcement(
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid date format. Use YYYY-MM-DD")
     
+    # Validate expiration date is not in the past
+    if exp_date.date() < datetime.now(timezone.utc).date():
+        raise HTTPException(status_code=400, detail="Expiration date cannot be in the past")
+    
     try:
         # Check if announcement exists
         existing = announcements_collection.find_one({"_id": ObjectId(announcement_id)})
