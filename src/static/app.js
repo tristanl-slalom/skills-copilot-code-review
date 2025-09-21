@@ -1213,7 +1213,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       // Create announcement content with emoji and message
       const content = document.createElement('span');
-      content.innerHTML = `<span aria-hidden="true">📢</span> ${announcement.message}`;
+      content.innerHTML = `<span aria-hidden="true">📢</span> ${escapeHtml(announcement.message)}`;
       
       // Add title as tooltip if it's different from message
       if (announcement.title && announcement.title !== announcement.message) {
