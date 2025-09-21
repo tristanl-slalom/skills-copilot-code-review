@@ -672,3 +672,346 @@ footer {
   padding: 15px;
   font-weight: bold;
 }
+
+/* === ANNOUNCEMENT MANAGEMENT STYLES === */
+
+/* Manage Announcements Button */
+.manage-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.manage-button:hover {
+  background-color: #0056b3;
+}
+
+.announcement-icon {
+  font-size: 1rem;
+}
+
+/* Announcement Modal */
+.announcement-modal-content {
+  max-width: 800px;
+  width: 90vw;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Announcements Header */
+.announcements-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.announcements-header h4 {
+  margin: 0;
+  color: #333;
+}
+
+.add-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.add-button:hover {
+  background-color: #1e7e34;
+}
+
+/* Announcements List */
+#announcements-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.announcement-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement-card:hover {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
+}
+
+.announcement-card.active {
+  border-left: 4px solid #28a745;
+}
+
+.announcement-card.inactive {
+  border-left: 4px solid #dc3545;
+  opacity: 0.8;
+}
+
+.announcement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.announcement-title {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+  flex: 1;
+}
+
+.announcement-status {
+  flex-shrink: 0;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-badge.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-badge.inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.announcement-message {
+  margin: 8px 0;
+  color: #666;
+  line-height: 1.4;
+}
+
+.announcement-dates {
+  margin: 8px 0;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.announcement-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.edit-announcement-btn,
+.delete-announcement-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.edit-announcement-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-announcement-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-announcement-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-announcement-btn:hover {
+  background-color: #c82333;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.empty-state p {
+  margin: 8px 0;
+}
+
+/* Form Header */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.form-header h4 {
+  margin: 0;
+  color: #333;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #545b62;
+}
+
+/* Form Styles */
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+#announcement-form .form-group {
+  margin-bottom: 16px;
+}
+
+#announcement-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+#announcement-form input,
+#announcement-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+#announcement-form input:focus,
+#announcement-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+#announcement-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+#announcement-form small {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+#save-announcement-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#save-announcement-button:hover {
+  background-color: #1e7e34;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .announcement-modal-content {
+    width: 95vw;
+    margin: 10px;
+  }
+
+  .announcements-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .announcement-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .announcement-actions {
+    justify-content: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .manage-button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .announcement-card,
+  .add-button,
+  .manage-button,
+  .edit-announcement-btn,
+  .delete-announcement-btn,
+  .cancel-button,
+  #save-announcement-button {
+    transition: none;
+  }
+}
